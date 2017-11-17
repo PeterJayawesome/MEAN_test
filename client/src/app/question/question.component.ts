@@ -21,7 +21,7 @@ export class QuestionComponent implements OnInit {
   		this._noteService.getQuestion(params.get('id'),(res)=>{
   			this.question = res;
   		})
-  	}
+  	})
   }
 
   like(id){

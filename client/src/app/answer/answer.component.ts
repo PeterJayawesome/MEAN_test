@@ -22,7 +22,7 @@ export class AnswerComponent implements OnInit {
   		this._noteService.getquest(params.get('id'),(res)=>{
   			this.question = res;
   		})
-  	}
+  	})
   }
 
   cancel(){

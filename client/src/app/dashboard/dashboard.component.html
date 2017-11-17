@@ -3,11 +3,12 @@
 <a [routerLink]="['/']">Logout</a>
 
 <form (submit)="Search()">
-	<input type="text" name="search" [(ngModel)]="word">
-	<button type="submit">Search</button>
+	<input type="text" name="search" class="form-contorl" [(ngModel)]="word">
+	<button type="submit" class="btn btn-info">Search</button>
 </form>
 
 <h3>Questions:</h3>
+
 <table>
 	<thead>
 		<tr>

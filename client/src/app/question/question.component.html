@@ -12,11 +12,15 @@
 <p>{{question.description}}</p>
 
 <div>
-	<div *ngFor="let answer of question._answers">
-		<p>{{answer.name}}: </p>
-		<p>{{answer.answer}}</p>
-		<p>{{answer.support}}</p>
-		<p>{{answer.likes}} Likes</p>
-		<button (click)="like(answer._id)">Like!</button>
+	<div class="answerdiv" *ngFor="let answer of question._answers">
+		<div class="inline answer">
+			<p>{{answer.name}}: </p>
+			<p>{{answer.answer}}</p>
+			<p>{{answer.support}}</p>
+		</div>
+		<div class="inline likediv">
+			<p>{{answer.likes}} Likes</p>
+			<button (click)="like(answer._id)" class="btn btn-primary">Like!</button>
+		</div>
 	</div>
 </div>

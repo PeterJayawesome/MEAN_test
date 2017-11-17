@@ -2,13 +2,16 @@
 <a [routerLink]="['/']">Logout</a>
 
 <form (submit)="OnSubmit()">
-	<p>Question: <input type="text" name="title" [(ngModel)]="question.title" required minlength="10" #quest="ngModel"></p>
+	<p>Question:</p>
+	<input type="text" class="form-control" name="title" [(ngModel)]="question.title" required minlength="10" #quest="ngModel">
 	<ul *ngIf="quest.invalid && (quest.dirty||quest.touched)">
 		<li *ngIf="quest.errors.required">Question is empty.</li>
 		<li *ngIf="quest.errors.minlength">Question is too short.</li>
 	</ul>
 	<p>Description(optional):</p>
-	<textarea name="content" [(ngModel)]="question.description"></textarea>
-	<button (click)="cancel()">Cancel</button>
-	<button type="submit" [disabled]="quest.invalid">Submit</button>
+	<textarea name="content" class="form-control" [(ngModel)]="question.description"></textarea><br>
+	<div class="buttondiv">
+		<button (click)="cancel()" class="btn btn-secondary">Cancel</button>
+		<button type="submit" [disabled]="quest.invalid" class="btn btn-primary">Submit</button>
+	</div>
 </form>

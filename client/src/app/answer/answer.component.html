@@ -5,19 +5,21 @@
 <a [routerLink]="['/dashboard']">Home</a> | 
 <a [routerLink]="['/questions',question._id]">Go Back to Question</a> | 
 <a [routerLink]="['/']">Logout</a>
-
-<h2>{{question.title}}</h2>
-<p>{{question.description}}</p>
+<div class="question">
+	<h2>{{question.title}}</h2>
+	<p>{{question.description}}</p>
+	
+</div>
 
 <form (submit)="OnSubmit()">
 	<p>Your Answer:</p>
-	<textarea name="answer" [(ngModel)]="answer.answer" required minlength="5" #lanswer="ngModel"></textarea><br>
+	<textarea name="answer" class="form-control" [(ngModel)]="answer.answer" required minlength="5" #lanswer="ngModel"></textarea><br>
 	<ul *ngIf="lanswer.invalid && (lanswer.dirty||lanswer.touched)">
 		<li *ngIf="lanswer.errors.required">Answer is empty.</li>
 		<li *ngIf="lanswer.errors.minlength">Answer is too short.</li>
 	</ul>
 	<p>Supporting details for your answer(optional):</p>
-	<textarea name="support" [(ngModel)]="answer.support"></textarea><br>
-	<button (click)="cancel()">Cancel</button>
-	<button type="submit" [disabled]="lanswer.invalid">Submit</button>
+	<textarea name="support" class="form-control" [(ngModel)]="answer.support"></textarea><br>
+	<button (click)="cancel()" class="btn btn-secondary">Cancel</button>
+	<button type="submit" [disabled]="lanswer.invalid" class="btn btn-primary">Submit</button>
 </form>

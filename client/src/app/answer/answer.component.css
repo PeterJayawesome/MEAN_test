@@ -1,0 +1,11 @@
+.question{
+	text-align: left;
+	border-bottom: 1px solid lightgrey;
+	margin-bottom: 20px;
+}
+form{
+	text-align: left;
+}
+textarea.ng-invalid.ng-touched{
+	background-color: pink;
+}
