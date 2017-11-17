@@ -1,5 +1,6 @@
 <p>
   notes works!
+  this is a change!
 </p>
 <form (submit)="OnSubmit()">
 	<p>Title: <input type="text" name="title" [(ngModel)]="note.title"></p>
@@ -13,7 +14,7 @@
 <div>
 	<div *ngFor="let nte of notes">
 		<h3>{{nte.title}}</h3>
-		<p>{{nte.date}}</p>
+		<p>{{nte.date|date}}</p>
 		<p>{{nte.content}}</p>
 		<p>-{{nte.author}}</p>
 	</div>
