@@ -1,0 +1,22 @@
+<p>
+  question works!
+</p>
+
+
+<a [routerLink]="['/dashboard']">Home</a> | 
+<a [routerLink]="['/questions',question._id,'new_answer']">Answer this Question</a> | 
+<a [routerLink]="['/']">Logout</a>
+
+
+<h2>{{question.title}}</h2>
+<p>{{question.description}}</p>
+
+<div>
+	<div *ngFor="let answer of question._answers">
+		<p>{{answer.name}}: </p>
+		<p>{{answer.answer}}</p>
+		<p>{{answer.support}}</p>
+		<p>{{answer.likes}} Likes</p>
+		<button (click)="like(answer._id)">Like!</button>
+	</div>
+</div>

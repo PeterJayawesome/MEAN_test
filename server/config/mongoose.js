@@ -3,7 +3,7 @@ var path = require('path');
 
 var fs = require('fs');
 
-mongoose.connect('mongodb://localhost/belt_exam_db');
+mongoose.connect('mongodb://localhost/Q_A_db');
 
 var models_path = path.join(__dirname, './../models');
 

@@ -6,12 +6,20 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { NoteService } from './note.service';
 import { AppComponent } from './app.component';
-import { NotesComponent } from './notes/notes.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { NewquestionComponent } from './newquestion/newquestion.component';
+import { QuestionComponent } from './question/question.component';
+import { AnswerComponent } from './answer/answer.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NotesComponent
+    DashboardComponent,
+    NewquestionComponent,
+    QuestionComponent,
+    AnswerComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

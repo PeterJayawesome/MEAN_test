@@ -1,0 +1,5 @@
+<form (submit)="OnSubmit()">
+	<p>Name: <input type="text" name="name" required [(ngModel)]="name" #lname="ngModel"></p>
+	<button type="submit" [disabled]="lname.invalid">Enter</button>
+	
+</form>
